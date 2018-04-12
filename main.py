@@ -7,27 +7,14 @@ from sqlalchemy.orm import sessionmaker
 from bs4 import BeautifulSoup
 
 from datasource import sqliteEngine, News
+from utils import is_chinese_string
 
-
-DBSession = sessionmaker(bind=sqliteEngine)
 
 def test():
 	pass
 
 if __name__ == "__main__":
-	session = DBSession()
-	news = session.query(News).filter(News.id == 100762591).first()
-	bs = BeautifulSoup(news.content, "html.parser")
-	text = bs.get_text()
-
-	# 分词
-	seg_list = jieba.cut(text, cut_all=False)
-	print("/ ".join(seg_list))
-
-	# 按句子形式输出，去除英文
-	sentence = []
-	for seg in seg_list:
-		if seg == "。" or seg == "！":
+	
 
 
 	# TextRank关键词提取
