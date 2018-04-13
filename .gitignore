@@ -1,3 +1,4 @@
+data.sqlite
 wordvector.model
 pip-selfcheck.json
 .vscode/
@@ -106,3 +107,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+/data.sqlite
+/articlearray.txt
+/tfidf.model
+/wordarray.txt
+/wordvector.model.trainables.syn1neg.npy
+/wordvector.model.wv.vectors.npy
